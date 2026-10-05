@@ -2,15 +2,17 @@
 #include <stdio.h>
 
 int main() {
-    int year;
+    int a, b;
+    printf("Enter value for a: ");
+    scanf("%d", &a);
+    printf("Enter value for b: ");
+    scanf("%d", &b);
 
-    printf("Enter a year: ");
-    scanf("%d", &year);
+    printf("\nBefore swapping: a = %d, b = %d\n", a, b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
 
-    if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
-        printf("%d is a leap year.", year);
-    else
-        printf("%d is not a leap year.", year);
-
+    printf("After swapping: a = %d, b = %d\n", a, b);
     return 0;
 }
